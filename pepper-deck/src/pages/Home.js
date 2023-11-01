@@ -1,3 +1,5 @@
+import InterviewItem from "../components/InterviewItem";
+import './Home.css'
 
 function Home() {
   return (
@@ -7,7 +9,8 @@ function Home() {
         <h2 class = 'homeTitle' > Upcoming Interviews</h2>
       </div>
       <div className="interviewsContainer">
-        
+        <InterviewItem/>
+
       </div>
     </div>
   );

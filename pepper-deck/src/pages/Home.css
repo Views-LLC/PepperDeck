@@ -1,9 +1,5 @@
-.job_description {
+.bodyContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.card_display {
-  display: flex;
 }
