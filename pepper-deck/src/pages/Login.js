@@ -37,9 +37,7 @@ const Login = () => {
 
   return (
     <div className='login-div'>
-      <div className='login-heading-banner'>
-        <h1 className='crumbs-header'> Crumbs </h1>
-      </div>
+      <div className='login-heading-banner'></div>
       <h1> Good to see you again </h1>
       <form className='login-form' onSubmit={loginUser}>
         <h2 className='login-heading'> Login </h2>

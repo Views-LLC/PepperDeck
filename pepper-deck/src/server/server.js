@@ -1,8 +1,8 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
-const cookieParser = require("cookie-parser");
-const router = require("./routes/Router");
+// const cookieParser = require("cookie-parser");
+// const router = require("./routes/Router");
 const SignupRouter = require("./routes/SignupRouter");
 
 const app = express();
@@ -11,14 +11,17 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); //for form data
-app.use(cookieParser());
+// app.use(cookieParser());
 
 //Router to serve signup
-app.use("/userAccess", SignupRouter);
+app.use("/access", SignupRouter);
+// app.use("/signup", SignupRouter);
 
 // NEED TO SET THIS UP
 // Router to serve middleware & response
-app.use("/route", router);
+// app.use("/route", router);
+
+
 
 // Global error handler
 app.use((req, res) =>

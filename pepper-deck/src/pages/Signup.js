@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const signup = () => {
+const Signup = () => {
   const navigate = useNavigate();
 
   const [userName, setUserName] = useState("");
@@ -10,7 +10,7 @@ const signup = () => {
   const register = async (ev) => {
     ev.preventDefault(); //This will not let the user go to the next page yet:
 
-    const response = await fetch("http://localhost:3000/userAccess/signup", {
+    const response = await fetch("http://localhost:3000/access/signup", {
       method: "POST",
       body: JSON.stringify({ userName, userPassword }),
       headers: {
@@ -19,7 +19,7 @@ const signup = () => {
     });
 
     const responseData = await response.json();
-    console.log("resposne Data from signup", responseData);
+    console.log("response Data from signup", responseData);
 
     if (response.status === 200) {
       alert("Registration Successful");
@@ -64,4 +64,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;
