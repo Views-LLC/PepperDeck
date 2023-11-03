@@ -8,8 +8,11 @@ import Deck from './pages/Deck';
 function App() {
   return (
     <>
-      <nav>
+      <nav className='navBar'>
         <ul>
+          <li>
+            <h1>PepperDeck</h1>
+          </li>
           <li>
             <Link to='/'>Home</Link>
           </li>
